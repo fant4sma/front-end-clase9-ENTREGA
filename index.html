@@ -7,179 +7,199 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous" />
 
         <style>
+            /* Mientras menos código escribas: mejor. Asi te obligas a sacarle más provecho a Bootstrap */
+
             @import url("https://fonts.googleapis.com/css2?family=Trispace:wght@300;400;600;700&display=swap");
 
             :root {
                 --bs-body-font-family: "Trispace", sans-serif;
-                --bs-body-color: #eef;
-                --bs-body-bg: #10121c;
+                --bs-body-bg: rgba(3, 21, 35, 1);
+                --bs-body-color: #eee;
             }
-            body{
-               
-                background: #012a41 
-            }
-            a{
-                color:#EA3D00 ;
+            a {
+                color: #ea3d00;
                 text-decoration: none;
             }
-            a:hover{
-                color: #B51A00;
+            a:hover {
+                color: #b51a00;
             }
-            #fondo_header{
-                height: 80vh;
-                background-image: url("ocean_700.png");
+            header {
+                background: linear-gradient(rgba(3, 41, 65, 0) 0%, rgba(3, 21, 35, 1) 80%), url("ocean_700.png");
                 background-repeat: no-repeat;
-                background-position: center;
-                background-size: cover;
             }
-            header.titular {
-                height: calc(40vh + 5vw);
-            }
-            h1{
+            h1 {
                 font-weight: 700;
                 font-size: 40px;
             }
-            #claro{
-                color: #19BAA3;
+            span {
+                color: #19baa3;
                 font-weight: 700;
             }
             p.primero::first-letter {
-                color: #B51A00;
+                color: #b51a00;
                 float: left;
                 font-size: 3rem;
                 line-height: 1;
                 margin: 0;
                 padding: 0 0.75rem 0 0;
             }
-            p.exp{
-                color: #A7CFD3;
-                padding-left: 10%;
-                padding-right: 10%;
-            }
-            img.ef{
-                filter: grayscale(1) opacity(.5);
-                transition: ease filter .5s;
-            }
-            img.ef:hover{
-                filter: grayscale(0) opacity(1);
-                transition: ease filter .5s;
-            }
         </style>
         <title>Pre-entrega, Introducción al Desarrollo Front End con HTML, CSS y JavaScript</title>
     </head>
     <body>
-        <header class="container-fluid" id="fondo_header">
-                <div class="row h-100">
-                    <div class="div text-center my-auto">
-                        
-                        <h1>Acidificación de océanos</h1>
-                        <h3 class="fs-5 mb-5">Una consecuencia de las emisiones de CO2.</h3>
-                        
-                    </div>
+        <header class="container-fluid pt-5">
+            <div class="row py-5">
+                <div class="col-12 text-center mt-5">
+                    <h1 class="mt-5">Acidificación de océanos</h1>
+                    <h3 class="fs-5 mb-5">Una consecuencia de las emisiones de CO2.</h3>
+                    <p class="m-0 text-center">Por <a href="https://github.com/fant4sma" target="_blank">Camila González</a></p>
+                    <p class="small text-center">PUBLICADO EL 12 DE MAYO, 2022 <br /></p>
                 </div>
-            
+            </div>
         </header>
 
         <main>
             <div class="container py-5">
-                <div class="row" >
-                    <div class="col-md-6 mx-auto" >
-                        <p class="m-0 text-center" style="padding-top: 5%;">Por <a href="https://github.com/fant4sma" target="_blank">Camila González</a><br></p>
-                        <p class="small text-center" style="padding-bottom: 10%;">PUBLICADO EL 12 DE MAYO, 2022 <br></p>
-
+                <div class="row">
+                    <div class="col-md-6 mx-auto">
                         <p class="primero">En este último tiempo, el pH de los océanos ha ido en aumento, lo cual en un futuro llegaría a generar cambios irrevesibles para todos los seres vivos que habitan sus aguas, y por consiguiente, tambien para nosotros.</p>
 
-                        <p>Como <strong>antecedente</strong> tenemos que en el océano, en donde habitan una gran cantidad de flora y fauna, tiene un <span id="claro">pH</span> básico que va desde 8.0 a 8.3, lo cual permite que exista la vida marítica tal y como la conocemos.</p>
+                        <p>Como <strong>antecedente</strong> tenemos que en el océano, en donde habitan una gran cantidad de flora y fauna, tiene un <span>pH</span> básico que va desde 8.0 a 8.3, lo cual permite que exista la vida marítica tal y como la conocemos.</p>
 
-                        <p class="text-center">Sin embargo, <span id="claro">¿Qué es el pH?</span></p>
+                        <h4 class="text-center mt-5 mb-2">Sin embargo, <span>¿Qué es el pH?</span></h4>
 
                         <p>El ph es una medida que sirve para cuantificar la acidez de una disolución acuosa, en este caso, la del océano.</p>
-                        <object data="pH.svg"  style="display:block; margin-left:auto; margin-right: auto; width: 70%; padding-top: 3%; padding-bottom: 8%;"></object>
 
-                        <p class="text-center">Y, <span id="claro">¿Qué está sucediendo?</span></p>
+                        <div class="text-center my-5">
+                            <img src="pH.svg" class="w-75 mx-auto" />
+                        </div>
+
+                        <h4 class="text-center mt-5 mb-2">Y, <span>¿Qué está sucediendo?</span></h4>
 
                         <p>En los aproximadamente 250 años que han pasado desde la Revolución industrial, el pH promedio en la superficie de los océanos ha ido en descenso.</p>
-                        <object data="2.svg"  style="display:block; margin-left:auto; margin-right: auto; width: 70%; padding-top: 3%; padding-bottom: 8%;"></object>
-                        <p class="small text-center exp" style="padding-bottom: 5%;"> <em>Este cambio aparentemente insignificante representa un <strong>aumento del 30%</strong> en la acidez de los océanos en comparación con la época preindustrial.</em></p>
-                        <p class="text-center">Ahora, <span id="claro">¿Por qué sucede esto?</span></p>
-                        <p>Esta acidificación de los océanos que se ha estado experimentando en el último tiempo, deriva del <strong>aumento</strong> de emisiones humanas de dióxido de carbono. </p>
-                        <p>Posterior a la revolución industrial, la quema de combustibles fósiles se ha visto en aumento, y por lo tanto, tambien los niveles de CO2 que se liberan a la atmósfera tal como se puede apreciar en el siguiente gráfico. </p>
+
+                        <div class="text-center my-5">
+                            <img src="2.svg" class="w-75 mx-auto" />
+                        </div>
+
+                        <p class="small text-center text-muted">Este cambio aparentemente insignificante representa un <strong>aumento del 30%</strong> en la acidez de los océanos en comparación con la época preindustrial.</p>
+
+                        <h4 class="text-center mt-5 mb-2">Ahora, <span>¿Por qué sucede esto?</span></h4>
+
+                        <p>Esta acidificación de los océanos que se ha estado experimentando en el último tiempo, deriva del <strong>aumento</strong> de emisiones humanas de dióxido de carbono.</p>
+
+                        <p>Posterior a la revolución industrial, la quema de combustibles fósiles se ha visto en aumento, y por lo tanto, tambien los niveles de CO2 que se liberan a la atmósfera tal como se puede apreciar en el siguientegráfico.</p>
 
                     </div>
-                    <div class="col-md-10 mx-auto my-5"><!--PRIMER GRAFICO-->
-
+                    <div class="col-md-10 mx-auto my-5">
+                        <!--PRIMER GRAFICO-->
                         <canvas id="mundo" width="400" height="200"></canvas>
+                    </div>
+                    <div class="col-md-6 mx-auto">
+                        
+                        <p class="small text-center text-muted">Suma total de las emisiones de CO2 producidas por combustibles fósiles y cemento desde 1900 a nivel mundial</p>
+                        
+                        <p>Por otro lado, también tenemos aquí, un grafico que nos muestra algunos de los países que más han contribuido a la emisión de estos gases:</p>
 
                     </div>
-                    <div class="col-md-6 mx-auto" >
-                        <p class="small text-center exp" style="padding-bottom: 5%;"> <em>Suma total de las emisiones de CO2 producidas por combustibles fósiles y cemento desde 1900 a nivel mundial</em></p>
-                            <p>Por otro lado, también tenemos aquí, un grafico que nos muestra algunos de los países que más han contribuido a la emisión de estos gases: </p>
-
-                    </div>
-                    <div class="col-md-10 mx-auto my-5"> <!--SEGUNDO GRAFICO-->
-
-                        <canvas id="acumuladas" width="400" height="200"></canvas>
-
-                    </div>
-                
-                    <div class="col-md-6 mx-auto" >
-                            <p>Y asi como las emisiones a nivel mundial se han disparado, nuestro país no es la exepción a ello:</p>
-
+                    <div class="col-md-10 mx-auto my-5">
+                        <!--SEGUNDO GRAFICO-->
+                        <canvas id="acumuladas" width="400" height="150"></canvas>
                     </div>
 
-                    <div class="col-md-10 mx-auto my-5"> <!--Tercero-->
+                    <div class="col-md-6 mx-auto">
+                        <p>Y asi como las emisiones a nivel mundial se han disparado, nuestro país no es la exepción a ello:</p>
+                    </div>
 
+                    <div class="col-md-10 mx-auto my-5">
+                        <!--Tercero-->
                         <canvas id="chile" width="400" height="200"></canvas>
-
                     </div>
 
-                    <div class="col-md-6 mx-auto" >
-                        <p class="small text-center exp" style="padding-bottom: 5%;"> <em>Suma total de las emisiones de CO2 producidas por combustibles fósiles y cemento desde 1900 en Chile</em></p>
-                        <p>Al igual que con otros gases de la atmosfera, la cantidad de CO2 que existe mantiene una armonía con la que hay en los océanos. Esto sucede debido a la <span id="claro">alta capacidad de absorción de CO2</span> propia de los océanos.</p>
-                        <p class="small text-center" >“hay aproximadamente 60 veces más CO2 en los océanos que en la atmósfera.”</p>
+                    <div class="col-md-6 mx-auto">
+                        
+                        <p class="small text-center text-muted">Suma total de las emisiones de CO2 producidas por combustibles fósiles y cemento desde 1900 en Chile</p>
+                        
+                        <p>Al igual que con otros gases de la atmosfera, la cantidad de CO2 que existe mantiene una armonía con la que hay en los océanos. Esto sucede debido a la <span>alta capacidad de absorción de CO2</span> propia de los océanos.</p>
+                        
+                        <h4 class="text-center mt-5 mb-2">“hay aproximadamente 60 veces más CO2 en los océanos que en la atmósfera.”</h4>
+                        
                         <p>Esto, en cierta medida, mitiga el ritmo y el impacto del cambio climático, dado que la atmosfera logra tener 30% menos de CO2 si esto no fuera así.</p>
+                        
                         <p>Pero, por otro lado, cuando el CO2 entra al océano, reacciona con el agua, produciendo ácido carbónico, lo cual aumenta el acidez del mar.</p>
+                        
                         <p>Si bien, hasta el momento el pH promedio de los océanos ha disminuido tan solo en 0,1 las proyecciones para el futuro no son mejores:</p>
-                        <object data="3.svg" style="display:block; margin-left:auto; margin-right: auto; width: 80%; padding-top: 3%; padding-bottom: 8%;"></object>
-                        <p class="small text-center">“Para finales de siglo, el pH habrá caído 0,4 unidades, casi  el  doble  de  los  niveles  naturales  de  acidez  del  océano”
-                            </p>
-                        <p class="text-center" style="padding-bottom: 5%;">En otras palabras, <span id="claro">la acidez aumentaría en un 250%.</span></p>
-                        <p class="text-center"><span id="claro">¿Qué consecuencias trae esto? </span> </p>
-                        <p>La acidificación de los océanos produce una reducción de la cantidad de iones de carbonato en el agua.  Muchos  animales  marinos  necesitan  iones  carbonato  para  el  <span id="claro">carbonato cálcico</span> indispensable  en  la  formación  de esqueletos  y  conchas.  Esto  afectará  su  desarrollo  y  su capacidad de reproducción, llegando a suponer un peligro para sus poblaciones.</p>
-                        <img src="shells.png" class="ef" style="display:block; margin-left:auto; margin-right: auto; width: 80%; padding-top: 3%; padding-bottom: 8%;">
-                        <p class="small text-center exp">Ejemplo de los efectos de la acidificación del océano en los caparazones. El caparazón sano de la izquierda es transparente con crestas suaves; por el contrario, el caparazón expuesto a agua más ácida y corrosiva está turbio, irregular y marcado con puntos débiles</p>
-                        <p>Algunas de las especies más afectadas son:</p>
-                        <object data="4.svg" style="display:block; margin-left:auto; margin-right: auto; width: 100%; padding-top: 3%; padding-bottom: 5%;"></object>
-                        <p>Los <span id="claro">pterópodos</span> (caracoles marinos pequeños), también disminuirían, teniendo un efecto importante en la cadena alimenticia dado que son la fuente de alimento de muchos tipos de peces  ballenas y pájaros de las regiones polares y subpolares.</p>
-                        <p>Los <span id="claro">efectos en los corales</span> también son preocupantes, ya que son altamente sensibles al entorno</p>
-                        <p ><span id="claro">Un cuarto</span> de todas las especies marinas depende de los arrecifes de coral como refugio, guardería, fuente de alimentación y área de desove</p>
-                        <img src="arrecife.png" class="ef" style="display:block; margin-left:auto; margin-right: auto; width: 90%; padding-top: 3%; padding-bottom: 5%;">
-                        <p class="text-center exp" style="font-size:12px ;">El mapa muestra el estado de saturación de aragonito estimado (un indicador de la acidificación del océano) para CO2 ,niveles de estabilización de 380 partes por millón (ppm), 450 ppm y 500 ppm, que corresponden aproximadamente a los años 2005, 2030 y 2050. Los puntos rosados ​​representan arrecifes de coral. Los colores azules más oscuros representan un estado de saturación de aragonito adecuado para apoyar el crecimiento de los arrecifes de coral; los colores amarillo-turquesa representan áreas de crecimiento marginal del coral, y los colores rojo-naranja representan ambientes extremadamente marginales que probablemente no respalden el crecimiento y la supervivencia del coral.</p>
-                        <p>Ahora que conocemos lo que está sucediendo, es nuestro turno de hacer algo. Informate <a href="https://www.acciona.com/es/cambio-climatico/" target="_blank">aquí</a>  para saber que hacer al respecto y conocer más acerca del tema. <span id="claro">No solo los océanos corren peligro, si no que también el mundo tal y como lo conocemos.</span></p>
                         
+                        <div class="text-center my-5">
+                            <img src="3.svg" class="w-75" />
+                        </div>
                         
-                    </div>
+                        <p class="small text-center">“Para finales de siglo, el pH habrá caído 0,4 unidades, casi el doble de los niveles naturales de acidez del océano”</p>
+                        
+                        <p class="text-center">En otras palabras, <span>la acidez aumentaría en un 250%.</span></p>
+                        
+                        <h4 class="text-center mt-5 mb-2"><span>¿Qué consecuencias trae esto? </span></h4>
+                        
+                        <p>La acidificación de los océanos produce una reducción de la cantidad de iones de carbonato en el agua. Muchos animales marinos necesitan iones carbonato para el <span>carbonato cálcico</span> indispensable en la formación de esqueletos y conchas. Esto afectará su desarrollo y su capacidad de reproducción, llegando a suponer un peligro para sus poblaciones.</p>
 
-                    
+                        <img src="shells.png" class="w-100 my-3" />
+
+                        <p class="small text-center text-muted">Ejemplo de los efectos de la acidificación del océano en los caparazones. El caparazón sano de la izquierda es transparente con crestas suaves; por el contrario, el caparazón expuesto a agua más ácida y corrosiva está turbio, irregular y marcado con puntos débiles</p>
+
+                        <p>Algunas de las especies más afectadas son:</p>
+
+                        <div class="text-center my-5">
+                            <img src="4.svg" class="w-75 mx-auto" />
+                        </div>
+
+                        <p>Los <span>pterópodos</span> (caracoles marinos pequeños), también disminuirían, teniendo un efecto importante en la cadena alimenticia dado que son la fuente de alimento de muchos tipos de peces ballenas y pájaros de las regiones polares y subpolares.</p>
+
+                        <p>Los <span>efectos en los corales</span> también son preocupantes, ya que son altamente sensibles al entorno</p>
+                        
+                        <p><span>Un cuarto</span> de todas las especies marinas depende de los arrecifes de coral como refugio, guardería, fuente de alimentación y área de desove</p>
+                        
+                        <img src="arrecife.png" class="w-100 my-3" />
+                        
+                        <p class="text-center small text-muted"> El mapa muestra el estado de saturación de aragonito estimado (un indicador de la acidificación del océano) para CO2 ,niveles de estabilización de 380 partes por millón (ppm), 450 ppm y 500 ppm, que corresponden aproximadamente a los años 2005, 2030 y 2050. Los puntos rosados representan arrecifes de coral. Los colores azules más oscuros representan un estado de saturación de aragonito adecuado para apoyar el crecimiento de los arrecifes de coral; los colores amarillo-turquesa representan áreas de crecimiento marginal del coral, y los colores rojo-naranja representan ambientes extremadamente marginales que probablemente no respalden el crecimiento y la supervivencia del coral.</p>
+
+                        <p>Ahora que conocemos lo que está sucediendo, es nuestro turno de hacer algo. Informate <a href="https://www.acciona.com/es/cambio-climatico/" target="_blank">aquí</a> para saber que hacer al respecto y conocer más acerca del tema. <span>No solo los océanos corren peligro, si no que también el mundo tal y como lo conocemos.</span></p>
+
+                    </div>
                 </div>
             </div>
         </main>
 
-        
-
-        
-
         <aside>
-            <div class="container" >
+            <div class="container">
                 <div class="row py-5">
                     <div class="col-sm-10 col-md-8 col-lg-6 mx-auto small text-center">
-                        <p class="small my-5">Evaluación N°1 de <a href="https://github.com/profesorfaco/front-end">Introducción al Desarrollo Front End con HTML, CSS y JavaScript</a>.<br>Inspirado en <a href="https://graphics.reuters.com/TONGA-VOLCANO/LIGHTNING/zgpomjdbypd/">Analysing the volcanic lightning from the Tonga eruption</a>, desarrollado para <a href="https://graphics.reuters.com/">Reuters Graphics</a> por Manas Sharma y Simon Scarr.<br>Resuelto con <a href="https://getbootstrap.com/">Bootstrap</a> y <a href="https://www.chartjs.org/">Charts.js</a><br>Consultado desde <a href="https://raw.githubusercontent.com/fant4sma/testeo/main/co2_simplificado.csv">CSV</a> y <a href="https://raw.githubusercontent.com/fant4sma/testeo/main/datos_co2.json">JSON</a><br><br>Fuentes:<br><a href="https://ourworldindata.org/contributed-most-global-co2">Emisiones de CO2</a><br><a href="https://reefresilience.org/es/stressors/ocean-acidification/">Reef resilence network: Acidificación de los océanos</a><br><a href="https://www.neefusa.org/weather-and-climate/climate-change/acidificacion-del-oceano">NEEF: Acidificación de los océanos</a><br><a href="https://www.acciona.com/es/cambio-climatico/?_adin=11551547647">Cambio climático</a></p>
+                        <p class="small my-5">
+                            Evaluación N°1 de <a href="https://github.com/profesorfaco/front-end">Introducción al Desarrollo Front End con HTML, CSS y JavaScript</a>.
+                            <br />
+                            Inspirado en <a href="https://graphics.reuters.com/TONGA-VOLCANO/LIGHTNING/zgpomjdbypd/">Analysing the volcanic lightning from the Tonga eruption</a>, desarrollado para <a href="https://graphics.reuters.com/">Reuters Graphics</a> por Manas Sharma y Simon Scarr.
+                            <br />
+                            Resuelto con <a href="https://getbootstrap.com/">Bootstrap</a> y <a href="https://www.chartjs.org/">Charts.js</a>
+                            <br />
+                            Consultado desde <a href="https://raw.githubusercontent.com/fant4sma/testeo/main/co2_simplificado.csv">CSV</a> y <a href="https://raw.githubusercontent.com/fant4sma/testeo/main/datos_co2.json">JSON</a>
+                        </p>
+
+                        <p class="small my-5">
+                            Fuentes:
+                            <br />
+                            <a href="https://ourworldindata.org/contributed-most-global-co2">Emisiones de CO2</a>
+                            <br />
+                            <a href="https://reefresilience.org/es/stressors/ocean-acidification/">Reef resilence network: Acidificación de los océanos</a>
+                            <br />
+                            <a href="https://www.neefusa.org/weather-and-climate/climate-change/acidificacion-del-oceano">NEEF: Acidificación de los océanos</a>
+                            <br />
+                            <a href="https://www.acciona.com/es/cambio-climatico/?_adin=11551547647">Cambio climático</a>
+                        </p>
                     </div>
                 </div>
             </div>
         </aside>
 
-        <footer class="bg-cierre" style="background-color: #00091e;">
+        <footer class="bg-black">
             <div class="container">
                 <div class="row py-3">
                     <div class="col text-center"><small>Camila González | 12 de mayo, 2022</small></div>
@@ -202,90 +222,87 @@
                 const consulta = await fetch("https://raw.githubusercontent.com/fant4sma/testeo/main/datos_co2.json");
                 const data = await consulta.json();
                 //emisiones acumuladas en el tiempo
-                var ac_china=0;
-                var ac_india=0;
-                var ac_usa=0;
-                var ac_europe=0;
-                var ac_chile=0;
+                var ac_china = 0;
+                var ac_india = 0;
+                var ac_usa = 0;
+                var ac_europe = 0;
+                var ac_chile = 0;
 
-                var anio_chile=[];
-                var em_anio_chile=[];
+                var anio_chile = [];
+                var em_anio_chile = [];
 
-                var anio_europe=[];
-                var em_anio_europe=[];
-            
-                var anio_usa=[];
-                var em_anio_usa=[];
+                var anio_europe = [];
+                var em_anio_europe = [];
 
-                var anio_world=[];
-                var em_anio_world=[];
+                var anio_usa = [];
+                var em_anio_usa = [];
 
-                var ac_world=0;
-                data.forEach(d => {
-                    if (d.Entity=="China"){
-                        ac_china=ac_china+d.Cumulative_CO2_emissions;
+                var anio_world = [];
+                var em_anio_world = [];
+
+                var ac_world = 0;
+                data.forEach((d) => {
+                    if (d.Entity == "China") {
+                        ac_china = ac_china + d.Cumulative_CO2_emissions;
                     }
-                    if (d.Entity=="India"){
-                        ac_india=ac_india+d.Cumulative_CO2_emissions;
+                    if (d.Entity == "India") {
+                        ac_india = ac_india + d.Cumulative_CO2_emissions;
                     }
-                    if (d.Entity=="United States"){
-                        let str= String(d.Year)
-                        ac_usa=ac_usa+d.Cumulative_CO2_emissions;
+                    if (d.Entity == "United States") {
+                        let str = String(d.Year);
+                        ac_usa = ac_usa + d.Cumulative_CO2_emissions;
                         anio_usa.push(str);
                         em_anio_usa.push(d.Cumulative_CO2_emissions);
                     }
-                    if (d.Entity=="Europe"){
-                        let str= String(d.Year)
-                        ac_europe=ac_europe+d.Cumulative_CO2_emissions;
+                    if (d.Entity == "Europe") {
+                        let str = String(d.Year);
+                        ac_europe = ac_europe + d.Cumulative_CO2_emissions;
                         anio_europe.push(str);
                         em_anio_europe.push(d.Cumulative_CO2_emissions);
                     }
-                    if(d.Entity=="Chile"){
-                        let str= String(d.Year)
-                        ac_chile=ac_chile+d.Cumulative_CO2_emissions;
+                    if (d.Entity == "Chile") {
+                        let str = String(d.Year);
+                        ac_chile = ac_chile + d.Cumulative_CO2_emissions;
                         anio_chile.push(str);
                         em_anio_chile.push(d.Cumulative_CO2_emissions);
-                    }
-                    else if(d.Entity=="World"){
-                        let str= String(d.Year)
-                        ac_world=ac_world+d.Cumulative_CO2_emissions;
+                    } else if (d.Entity == "World") {
+                        let str = String(d.Year);
+                        ac_world = ac_world + d.Cumulative_CO2_emissions;
                         anio_world.push(str);
                         em_anio_world.push(d.Cumulative_CO2_emissions);
                     }
                 });
-                
-                var otros=ac_world-ac_china-ac_europe-ac_chile-ac_india-ac_usa;
 
+                var otros = ac_world - ac_china - ac_europe - ac_chile - ac_india - ac_usa;
 
                 /*
                     GRAFICOS
                 */
-               
 
                 new Chart(document.getElementById("acumuladas").getContext("2d"), {
                     type: "bar",
                     data: {
                         labels: ["Europa", "Estados Unidos", "China", "India"],
-                        datasets: [{ data: [ac_europe, ac_usa, ac_china, ac_india], label: ["Emisiones CO2"], backgroundColor: ["#B51A00", "#19BAA3","#EF7C2E" , "#A7CFD3"] }],
+                        datasets: [{ data: [ac_europe, ac_usa, ac_china, ac_india], label: ["Emisiones CO2"], backgroundColor: ["#B51A00", "#19BAA3", "#EF7C2E", "#A7CFD3"] }],
                     },
                     options: {
-                        indexAxis: 'y',
+                        indexAxis: "y",
                         elements: {
                             bar: {
                                 borderWidth: 2,
-                            }
+                            },
                         },
                         responsive: true,
                         plugins: {
                             legend: {
-                                position: 'right',
+                                position: "right",
                             },
                             title: {
                                 display: true,
                                 text: "Emisiones de CO2 acumuladas de algunos países",
-                                color: "#eef"
-                            }
-                        }
+                                color: "#eef",
+                            },
+                        },
                     },
                 });
 
@@ -293,55 +310,45 @@
                     type: "line",
                     data: {
                         labels: anio_chile,
-                        datasets: [
-                        { data: em_anio_chile, label: "Chile", borderColor:["#B51A00"], color: ["#ffffff"] }
-                        ],
+                        datasets: [{ data: em_anio_chile, label: "Chile", borderColor: ["#B51A00"], color: ["#ffffff"] }],
                     },
                     options: {
-                        
                         responsive: true,
                         plugins: {
                             legend: {
-                                position: 'right',
-                                color: "#eef"
+                                position: "right",
+                                color: "#eef",
                             },
                             title: {
                                 display: true,
-                                text: 'Emisiones acumuladas de CO2 (Chile)',
-                                color: "#eef"
-                            }
-                        }
+                                text: "Emisiones acumuladas de CO2 (Chile)",
+                                color: "#eef",
+                            },
+                        },
                     },
                 });
 
                 new Chart(document.getElementById("mundo").getContext("2d"), {
-                    
                     type: "line",
                     data: {
-                        labels: anio_world, 
-                        datasets: [
-                        { data: em_anio_world, label: "Mundo", fill:false, borderColor:["#B51A00"], color: ["#ffffff"] }
-                        ],
+                        labels: anio_world,
+                        datasets: [{ data: em_anio_world, label: "Mundo", fill: false, borderColor: ["#B51A00"], color: ["#ffffff"] }],
                     },
                     options: {
-                       
                         responsive: true,
                         plugins: {
                             legend: {
-                                position: 'right',
-                                color: "#eef"
+                                position: "right",
+                                color: "#eef",
                             },
                             title: {
                                 display: true,
-                                text: 'Emisiones acumuladas de CO2 (mundial)',
-                                color: "#eef"
+                                text: "Emisiones acumuladas de CO2 (mundial)",
+                                color: "#eef",
                             },
-                            
-                        }
+                        },
                     },
                 });
-                
-                
             }
             todo().catch((error) => console.error(error));
         </script>
